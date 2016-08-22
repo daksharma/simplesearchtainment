@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="simpleSearchtainmentApp">
 <head>
     <title>Page Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -9,9 +9,29 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
           crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
 </head>
 <body>
-<h1>Search...</h1>
+<h1 class="simpleSearchTainmentTitle">Simple Searchainment</h1>
+<!-- SEARCH BAR -->
+<div class="col-lg-6 searchBoxStyle" >
+    <div class="input-group">
+        <input ng-model="userSearchInput" type="text" class="form-control" placeholder="Search for movie, actor, producer, director, etc...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+        </span>
+    </div>
+</div>
+<!-- SEARCH Result -->
+<div ng-controller="userSearchResults">
+
+</div>
+
+
+<div ng-controller="searchResultViewController">
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </body>
 </html>
