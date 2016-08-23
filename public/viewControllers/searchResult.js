@@ -11,6 +11,7 @@ angular.module('simpleResultModule', ['ngRoute', 'ngResource'])
         console.log("DATAAAAA:", currentSearch.resultObject);
         setTimeout(function(){
             currentSearch.actualResultScope = currentSearch.resultScope.$$state.value.data;
+            currentSearch.noPoster = (currentSearch.actualResultScope.Poster === "N/A");
             console.log(currentSearch.actualResultScope);
             // console.log(currentSearch.resultScope.$$state.value.data);
         }, 200);

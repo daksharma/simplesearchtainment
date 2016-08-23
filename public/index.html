@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="simpleSearchtainmentApp">
+<html >
 	<head>
 		<title>Page Title</title>
 		<link rel="stylesheet"
@@ -13,9 +13,11 @@
 		<link rel="stylesheet"
 			  type="text/css"
 			  href="style.css"/>
+		<link rel="stylesheet"
+			  href="../node_modules/angular-material/angular-material.css">
 
 	</head>
-	<body>
+	<body ng-app="simpleSearchtainmentApp">
 		<h1 class="simpleSearchTainmentTitle">Simple Searchainment</h1>
 		<!-- SEARCH BAR -->
 		<div ng-controller="searchResultViewController">
@@ -36,10 +38,10 @@
 
 			</form>
 			<!-- SEARCH Result-->
-			<div class="media">
-				<div class="media-left">
+			<div class="media searchBoxStyle">
+				<div class="media-left media-middle " ng-show="!noPoster">
 					<a href="#">
-						<img class="media-object" src="{{actualResultScope.Poster}}" alt="...">
+						<img class="media-object "  width="150px" height="200px" src="{{actualResultScope.Poster}}" alt="...">
 					</a>
 				</div>
 				<div class="media-body">
@@ -50,11 +52,13 @@
 				<p>{{actualResultScope}}</p>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
+		<script src="app.js"></script>
+		<script src="../node_modules/angular/angular.js" type="text/javascript" ></script>
+		<script src="../node_modules/angular-animate/angular-animate.js" type="text/javascript" ></script>
+		<script src="../node_modules/angular-aria/angular-aria.js" type="text/javascript" ></script>
+		<script src="../node_modules/angular-material/angular-material.js" type="text/javascript" ></script>
 		<script src="searchService.js"></script>
 		<script src="viewControllers/searchResult.js"></script>
-		<script src="app.js"></script>
+
 	</body>
 </html>
